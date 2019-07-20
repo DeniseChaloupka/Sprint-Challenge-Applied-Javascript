@@ -9,33 +9,36 @@
 //  </div >
 // And add it to the DOM in the .headerContainer component
 
-const pageheader = document.querySelector('.header-container');
-pageheader.appendChild(Header());
-
-
 function Header() {
 
-    //elements
+    //  ELEMENT 
     const header = document.createElement("div");
-    const headerdate = document.createElement("span");
-    const header1 = document.createElement("h1");
-    const headertemp = document.createElement("span");
+    const date = document.createElement("span");
+    const headerH1 = document.createElement("h1");
+    const temp = document.createElement("span");
 
-    //styles
+    // CLASS NAMES
     header.classList.add("header");
-    headerdate.classList.add("date");
-    header1.classList.add("h1");
-    headertemp.classList.add("temp");
+    date.classList.add("date");
+    temp.classList.add("temp");
 
-    //content
-    headerdate.textContent = "SMARCH 28, 2019";
-    header1.textContent = "Lambda Times";
-    headertemp.textContent = "98°";
+    // TEXT CONTENT
+    date.textContent = "March 28, 2019";
+    headerH1.textContent = "Lambda Times";
+    temp.textContent = "98°";
 
-    //append
-    header.appendChild(headerdate);
-    header.appendChild(header1);
-    header.appendChild(headertemp);
+    // PIECEING TOGETHER
+    header.appendChild(date);
+    header.appendChild(headerH1);
+    header.appendChild(temp);
 
-    return header;
+    return header
 }
+
+
+// headerContainer
+const headerContainer = document.querySelector(".header-container");
+console.log(headerContainer);
+
+// append header to headerContainer div 
+headerContainer.appendChild(Header());
